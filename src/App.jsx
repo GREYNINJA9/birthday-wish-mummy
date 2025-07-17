@@ -11,6 +11,7 @@ function App() {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [showMemory, setShowMemory] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [wrongAnswers, setWrongAnswers] = useState([]); // New state for wrong answers
 
   const startQuiz = () => {
     setCurrentScreen('quiz');
@@ -22,15 +23,37 @@ function App() {
 
   const handleNextQuestion = () => {
     if (selectedAnswer) {
-      const isCorrect = selectedAnswer === quizData.questions[currentQuestionIndex].correctAnswer;
+      const currentQuestion = quizData.questions[currentQuestionIndex];
+      const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
+      
+      if (!isCorrect) {
+        // Add wrong answer to track incorrect options
+        setWrongAnswers([...wrongAnswers, {
+          questionId: currentQuestion.id,
+          wrongOption: selectedAnswer
+        }]);
+        alert(`Oops! "${selectedAnswer}" is incorrect. Try again!`);
+        setSelectedAnswer(''); // Clear selection
+        return; // Don't proceed to next question
+      }
+
+      // Only proceed if answer is correct
       setUserAnswers([...userAnswers, { 
-        questionId: quizData.questions[currentQuestionIndex].id, 
+        questionId: currentQuestion.id, 
         answer: selectedAnswer, 
         isCorrect 
       }]);
-      
       setShowMemory(true);
     }
+  };
+
+  // Filter out wrong answers for current question
+  const getFilteredOptions = () => {
+    const currentQuestionId = quizData.questions[currentQuestionIndex]?.id;
+    const wrongsForQuestion = wrongAnswers.filter(w => w.questionId === currentQuestionId);
+    return quizData.questions[currentQuestionIndex]?.options.filter(option => 
+      !wrongsForQuestion.some(w => w.wrongOption === option)
+    ) || [];
   };
 
   const continueToNextQuestion = () => {
@@ -49,7 +72,7 @@ function App() {
       <div className="max-w-3xl mx-auto">
         {currentScreen === 'landing' && (
           <div className="text-center animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl font-bold text-purple-700 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-purple-700 mb-6 font-fancy">
               Happy Birthday, {quizData.friendName}! 🎉
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -74,7 +97,7 @@ function App() {
             {!showMemory ? (
               <QuestionCard
                 question={quizData.questions[currentQuestionIndex].question}
-                options={quizData.questions[currentQuestionIndex].options}
+                options={getFilteredOptions()}
                 selectedAnswer={selectedAnswer}
                 onAnswerSelect={handleAnswerSelect}
                 onNext={handleNextQuestion}
