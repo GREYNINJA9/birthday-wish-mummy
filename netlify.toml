@@ -1,3 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm install --force && npm run build"
   publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18.20.2"  # Must match your engines
+  NPM_FLAGS = "--force"  # Ensures install completes

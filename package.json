@@ -1,4 +1,8 @@
 {
+  "engines": {
+    "node": ">=18.0.0 <=20.12.2",
+    "npm": ">=8.0.0"
+  },
   "name": "birthday-quiz",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +11,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preinstall": "npx npm-force-resolutions" 
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",
@@ -31,8 +36,8 @@
     "vite": "^7.0.4"
   
   },
-  "engines": {
-    "node": ">=18.0.0 <=20.12.2",
-    "npm": ">=8.0.0"
+  
+  "resolutions": {
+    "@rollup/rollup-linux-x64-gnu": "3.29.4"  
   }
 }
