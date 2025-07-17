@@ -11,14 +11,14 @@ const FinalGiftScreen = ({ friendName, coordinates, what3words, message }) => {
       <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md mx-auto animate-fadeIn">
         <h2 className="text-3xl font-bold text-purple-700 mb-4">🎉 Congratulations! 🎉</h2>
         <p className="text-xl text-gray-700 mb-6">
-          You've completed the quiz, {friendName}! {message}
+          Thank god your memory didn't faided, {friendName}! {message}
         </p>
         
         <div className="mb-6 rounded-lg overflow-hidden shadow-md">
           <iframe
             width="100%"
             height="300"
-            frameBorder="0"
+            frameborder="0"
             style={{ border: 0 }}
             src={`https://www.google.com/maps/embed/v1/view?key=YOUR_API_KEY&center=${coordinates.lat},${coordinates.lng}&zoom=18&maptype=satellite`}
             allowFullScreen

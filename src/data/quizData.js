@@ -9,7 +9,7 @@ export const quizData = {
       memory: {
         type: "image",
         content: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "Remember how we stayed up all night studying for the Algorithms final?"
+        message: "Always be my 👑💅 girliee 💁‍♀️💖"
       }
     },
     {
@@ -20,7 +20,7 @@ export const quizData = {
       memory: {
         type: "video",
         content: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with your video
-        message: "That 24-hour coding marathon was insane! We built our first project together."
+        message: "Pledge this time to change this in you❤️🤝"
       }
     },
     {
@@ -31,7 +31,7 @@ export const quizData = {
       memory: {
         type: "image",
         content: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "You always teased me about my Python obsession!"
+        message: "Hasti hui chimpanzee kahi ki.🤪🤪🤪"
       }
     },
     {
@@ -42,7 +42,7 @@ export const quizData = {
       memory: {
         type: "video",
         content: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "That campus navigation app got us our first internship offers!"
+        message: "Kaash thoda ache se has leti m bhi khush ho jaati ye soch ke🤣🤣🤣"
       }
     },
     {
@@ -53,7 +53,7 @@ export const quizData = {
       memory: {
         type: "image",
         content: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "You always said I drank enough coffee to power a small server!"
+        message: "Pagli kahi ki🐒🙈🤭"
       }
     }
   ],

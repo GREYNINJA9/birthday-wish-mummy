@@ -4,12 +4,7 @@ import QuestionCard from './components/QuestionCard';
 import MemoryReveal from './components/MemoryReveal';
 import FinalGiftScreen from './components/FinalGiftScreen';
 import ProgressBar from './components/ProgressBar';
-
-// Background SVG pattern
-const backgroundStyle = {
-  backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%237c3aed' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E")`,
-  backgroundAttachment: 'fixed'
-};
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('landing');
@@ -71,60 +66,118 @@ function App() {
   };
 
   return (
-    <div 
-      className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
-      style={backgroundStyle}
-    >
-      <div className="max-w-3xl mx-auto">
-        {currentScreen === 'landing' && (
-          <div className="text-center animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl font-bold text-purple-700 mb-6 font-fancy float-animation">
-              Happy Birthday, {quizData.friendName}! 🎉
-            </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Let's test how well you know me with this special birthday quiz!
-            </p>
-            <button
-              onClick={startQuiz}
-              className="py-3 px-8 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xl font-semibold rounded-full shadow-lg btn-hover-effect"
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 bg-animated">
+      <div className="max-w-2xl mx-auto">
+        <AnimatePresence mode="wait">
+          {/* Landing Screen */}
+          {currentScreen === 'landing' && (
+            <motion.div
+              key="landing"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="text-center glass-card p-8 rounded-2xl shadow-xl"
             >
-              Start Quiz
-            </button>
-          </div>
-        )}
+              <motion.h1 
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+                className="text-4xl md:text-5xl font-bold text-white mb-6 font-fancy"
+              >
+                Happy Birthday, {quizData.friendName}! 🎉
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-xl text-white/90 mb-8"
+              >
+                Let's test how well you know me with this special birthday quiz!
+              </motion.p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={startQuiz}
+                className="py-4 px-10 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xl font-semibold rounded-full shadow-lg"
+              >
+                Start Quiz
+                <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                </svg>
+              </motion.button>
+            </motion.div>
+          )}
 
-        {currentScreen === 'quiz' && (
-          <div>
-            <ProgressBar 
-              currentStep={showMemory ? currentQuestionIndex + 1 : currentQuestionIndex} 
-              totalSteps={quizData.questions.length} 
-            />
-            
-            {!showMemory ? (
-              <QuestionCard
-                question={quizData.questions[currentQuestionIndex].question}
-                options={getFilteredOptions()}
-                selectedAnswer={selectedAnswer}
-                onAnswerSelect={handleAnswerSelect}
-                onNext={handleNextQuestion}
+          {/* Quiz Screen */}
+          {currentScreen === 'quiz' && (
+            <motion.div
+              key="quiz"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5 }}
+              className="glass-card p-6 rounded-2xl shadow-xl"
+            >
+              <ProgressBar 
+                currentStep={showMemory ? currentQuestionIndex + 1 : currentQuestionIndex} 
+                totalSteps={quizData.questions.length} 
               />
-            ) : (
-              <MemoryReveal
-                memory={quizData.questions[currentQuestionIndex].memory}
-                onContinue={continueToNextQuestion}
-              />
-            )}
-          </div>
-        )}
+              
+              <AnimatePresence mode="wait">
+                {!showMemory ? (
+                  <motion.div
+                    key="question"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <QuestionCard
+                      question={quizData.questions[currentQuestionIndex].question}
+                      options={getFilteredOptions()}
+                      selectedAnswer={selectedAnswer}
+                      onAnswerSelect={handleAnswerSelect}
+                      onNext={handleNextQuestion}
+                    />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="memory"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 100 }}
+                  >
+                    <MemoryReveal
+                      memory={quizData.questions[currentQuestionIndex].memory}
+                      onContinue={continueToNextQuestion}
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          )}
 
-        {currentScreen === 'final' && (
-          <FinalGiftScreen
-            friendName={quizData.friendName}
-            coordinates={quizData.finalGift.coordinates}
-            what3words={quizData.finalGift.what3words}
-            message={quizData.finalGift.message}
-          />
-        )}
+          {/* Final Screen */}
+          {currentScreen === 'final' && (
+            <motion.div
+              key="final"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 100 }}
+              className="glass-card p-6 rounded-2xl shadow-xl"
+            >
+              <FinalGiftScreen
+                friendName={quizData.friendName}
+                coordinates={quizData.finalGift.coordinates}
+                what3words={quizData.finalGift.what3words}
+                message={quizData.finalGift.message}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

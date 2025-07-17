@@ -10,12 +10,26 @@
   --dark: #1e293b;
 }
 
+/* Base Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
 }
 
-/* Glassmorphism effect */
+/* Background Styles */
+.bg-static {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.bg-animated {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Glassmorphism Effect */
 .glass-card {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(16px);
@@ -25,17 +39,33 @@ body {
   border-radius: 1rem;
 }
 
-/* Floating animation */
+/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Utility Classes */
 .float-animation {
   animation: float 4s ease-in-out infinite;
 }
 
-/* Button hover effect */
 .btn-hover-effect {
   transition: all 0.3s ease;
   transform: perspective(1px) translateZ(0);
@@ -46,7 +76,31 @@ body {
   box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.5);
 }
 
-/* Custom scrollbar */
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.question-enter {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.option-enter {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.option-enter:nth-child(1) { animation-delay: 0.1s; }
+.option-enter:nth-child(2) { animation-delay: 0.2s; }
+.option-enter:nth-child(3) { animation-delay: 0.3s; }
+.option-enter:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -59,22 +113,4 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 10px;
-}
-
-/* Text gradient */
-.text-gradient {
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Pulse animation */
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-.pulse-animation {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
