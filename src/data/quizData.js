@@ -1,65 +1,65 @@
 export const quizData = {
-  friendName: "Nickey",
+  friendName: "Mummy",
   questions: [
     {
       id: 1,
-      question: "What is your favourite nickname given by your people?",
-      options: ["GAWAR", "MY GIRL", "P A", "SAKHII"],
-      correctAnswer: "MY GIRL",
+      question: "Aapke saath sbse jyada jaldi jaane ko kon taiyaar ho jaat h jaise gohana jaate ho aap ya aur kahi bhi",
+      options: ["Gulla urf sutho", "nikhil kumar verma", "Dono hi ho jaate h", "koi ni hota m akeli jaati hu"],
+      correctAnswer: "Gulla urf sutho",
       memory: {
-        type: "video",
-        content: "https://youtube.com/embed/8zIB3bv3tsY",
-        message: "Ladle, nickey hogi tu kisi aur ki, mere liye tu my girl hai. 😏huh!!! .."
+        type: "image",
+        content: "https://ibb.co/6c3YZmYYhttps://ibb.co/DHyTNG47/your-image.jpg",
+        message: "kyunki bhaiya aastik h aur aapki sb baat maanta h bus m hi hu jo kbhi ni maanta aapki baat"
       }
     },
     {
       id: 2,
-      question: "What is the one thing, Aastha wants to change in you?",
-      options: ["INSECURITIES", "MARKS", "DISTANCES", "TALKING SENSE"],
-      correctAnswer: "INSECURITIES",
+      question: "kiski shaadi m aap akele chale gye bina kisi bete ke saath?",
+      options: ["Chimpu mama ki shaadi", "gudiya mausi ki shaadi", "sonu mama ki shaadi", "m akeli nhi gyi hu kabhi bhi"],
+      correctAnswer: "sonu mama ki shaadi",
       memory: {
         type: "image",
-        content: "https://i.ibb.co/6c3YZmYY/your-image.jpg", // Replace with your video
-        message: "Pledge this time to change this in you❤️🤝"
+        content: "https://ibb.co/JW0mDVWQ/your-image.jpg", // Replace with your video
+        message: "btao akele chod diya tha nikhilla ko (majak m hi bola h mummy jbki aap saara bndobast krke gye the mera khaane peene ka)"
       }
     },
     {
       id: 3,
-      question: "What is our favourite thing to do together?",
-      options: ["Late night talks🌙", "Food hunting 🍣", "Making reels🎥", "Laughing for no reason😆"],
-      correctAnswer: "Laughing for no reason😆",
+      question: "Aap kiski fauji ya sipahi kehti ho",
+      options: ["bade mote bete ko", "chote patle shukhde bete ko", "chintu mama ko", "bambam mama ko"],
+      correctAnswer: "chote patle shukhde bete ko",
       memory: {
-        type: "video",
-        content: "https://youtube.com/embed/Q5m-_eYCt5I",
-        message: "Haindred % 🤷🏻‍♀️,,,, 😂🤣, btw, what's your battery %age right now 👀 screenshot bhejiyo."
+        type: "image",
+        content: "https://ibb.co/1tH9ZZk4/your-image.jpg",
+        message: "SSB centre ke gate m rona nhi chahiye tha aapko mummy."
       }
     },
     {
       id: 4,
-      question: "What reminds me of you instantly?",
-      options: ["A song we vibe to🎵", "Food you love😋", "Instagram reels📸", "Your weird laugh😆"],
-      correctAnswer: "Your weird laugh😆",
+      question: "Aapka sbse pyara beta konsa h",
+      options: ["dono hi nalayak h koi bhi pyara ni lgta", "bada beta hi lgta h", "nhi chota h mera pyara beta", "mere dono hi pyare bete h"],
+      correctAnswer: "mere dono hi pyare bete h",
       memory: {
-        type: "video",
-        content: "https://youtube.com/embed/lXsyNMWkfZA?",
-        message: "Kaash thoda ache se has leti m bhi khush ho jaati ye soch ke🤣🤣🤣"
+        type: "image",
+        content: "https://ibb.co/FbrPrpK9/your-image.jpg",
+        message: "mujhe pta h aap dono se barabar prem karte ho."
       }
     },
     {
       id: 5,
-      question: "What do you always say when Aastha turns on camera?",
-      options: ["Hieeee", "Meri photo le", "Chal ab hat ja", "none of these"],
-      correctAnswer: "Hieeee",
+      question: "Nikhil ko konsi class m pehli baar prize mila tha SB Model school mein",
+      options: ["9th", "10th", "11th", "12th"],
+      correctAnswer: "12th",
       memory: {
-        type: "video",
-        content: "https://youtube.com/embed/xPGcTwJvdXc",
-        message: "Pagli kahi ki🐒🙈🤭"
+        type: "image",
+        content: "https://ibb.co/ccG3KY5N/your-image.jpg",
+        message: "aakhiri m le hi aaya tha na badhiya result "
       }
     }
   ],
   finalGift: {
-    coordinates: { lat: 28.3667660, lng: 77.3171110 },
-    what3words: "///army.swells.charts",
-    message: "Your gift is hidden at this location! Use the coordinates or the what3words link to find it."
+    coordinates: { lat: 28.371483, lng: 77.323606 },
+    what3words: "///feast.buyers.munch",
+    message: "Aapke bete sb itni door h mummy but birthday feel jrur kra diya hoga dekh skte ho niche location m kitni door h."
   }
 };

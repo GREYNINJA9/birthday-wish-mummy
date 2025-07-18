@@ -32,7 +32,7 @@ function App() {
           questionId: currentQuestion.id,
           wrongOption: selectedAnswer
         }]);
-        alert(`Oops! "${selectedAnswer}" is incorrect. Try again!`);
+        alert(`Oops! "${selectedAnswer}" yeh nhi h answer aapko hmare se related cheez yaad ni h!`);
         setSelectedAnswer('');
         return;
       }
@@ -93,7 +93,7 @@ function App() {
                 transition={{ delay: 0.2 }}
                 className="text-xl text-white/90 mb-8"
               >
-                Let's test how well you know me with this special birthday quiz!
+               dekhte h aap mujhe aur bhaiya ko kitna jaante ho!
               </motion.p>
               <motion.button
                 whileHover={{ scale: 1.05 }}

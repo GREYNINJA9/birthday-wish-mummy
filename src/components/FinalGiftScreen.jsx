@@ -12,7 +12,7 @@ const FinalGiftScreen = ({ friendName, coordinates, what3words, message }) => {
       <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md mx-auto animate-fadeIn">
         <h2 className="text-3xl font-bold text-purple-700 mb-4">🎉 Congratulations! 🎉</h2>
         <p className="text-xl text-gray-700 mb-6">
-          Thank god your memory didn't fade, {friendName}! {message}
+          chalo aapko sb pta h humare baare m ache se {friendName}! {message}
         </p>
         
         {/* OpenStreetMap Embed - FREE */}
