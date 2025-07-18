@@ -8,7 +8,7 @@ export const quizData = {
       correctAnswer: "Gulla urf sutho",
       memory: {
         type: "image",
-        content: "https://ibb.co/Fb0dD2xf/your-image.jpg",
+        content: "https://i.ibb.co/qMW2rKy4/PSX-20250718-232122.jpg",
         message: "kyunki bhaiya aastik h aur aapki sb baat maanta h bus m hi hu jo kbhi ni maanta aapki baat"
       }
     },
@@ -19,7 +19,7 @@ export const quizData = {
       correctAnswer: "sonu mama ki shaadi",
       memory: {
         type: "image",
-        content: "https://ibb.co/8nGBXPgY/your-image.jpg", // Replace with your video
+        content: "https://i.ibb.co/gbQ76tZ4/PSX-20250718-232012.jpg", // Replace with your video
         message: "btao akele chod diya tha nikhilla ko (majak m hi bola h mummy jbki aap saara bndobast krke gye the mera khaane peene ka)"
       }
     },
@@ -30,7 +30,7 @@ export const quizData = {
       correctAnswer: "chote patle shukhde bete ko",
       memory: {
         type: "image",
-        content: "https://ibb.co/bMXFPZdN/your-image.jpg",
+        content: "https://i.ibb.co/sdqC2G3s/PSX-20250718-231859.jpg",
         message: "SSB centre ke gate m rona nhi chahiye tha aapko mummy."
       }
     },
@@ -41,7 +41,7 @@ export const quizData = {
       correctAnswer: "mere dono hi pyare bete h",
       memory: {
         type: "image",
-        content: "https://ibb.co/mxMMnXY/your-image.jpg",
+        content: "https://i.ibb.co/hqttGZn/PSX-20250718-231641.jpg",
         message: "mujhe pta h aap dono se barabar prem karte ho."
       }
     },
@@ -52,7 +52,7 @@ export const quizData = {
       correctAnswer: "12th",
       memory: {
         type: "image",
-        content: "https://ibb.co/zTxnySq6/your-image.jpg",
+        content: "https://i.ibb.co/LXRkLCVN/IMG-20250718-WA0028.jpg",
         message: "aakhiri m le hi aaya tha na badhiya result "
       }
     }
