@@ -19,7 +19,7 @@ export const quizData = {
       correctAnswer: "INSECURITIES",
       memory: {
         type: "image",
-        content: "https://ibb.co/6c3YZmYY?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", // Replace with your video
+        content: "https://i.ibb.co/6c3YZmYY/your-image.jpg", // Replace with your video
         message: "Pledge this time to change this in you❤️🤝"
       }
     },
