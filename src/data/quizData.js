@@ -18,8 +18,8 @@ export const quizData = {
       options: ["INSECURITIES", "MARKS", "DISTANCES", "TALKING SENSE"],
       correctAnswer: "INSECURITIES",
       memory: {
-        type: "video",
-        content: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with your video
+        type: "image",
+        content: "https://ibb.co/6c3YZmYY", // Replace with your video
         message: "Pledge this time to change this in you❤️🤝"
       }
     },

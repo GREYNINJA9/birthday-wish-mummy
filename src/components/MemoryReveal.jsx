@@ -46,3 +46,4 @@ const MemoryReveal = ({ memory, onContinue }) => {
     </div>
   );
 };
+export default MemoryReveal;
