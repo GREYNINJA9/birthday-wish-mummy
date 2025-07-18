@@ -7,9 +7,9 @@ export const quizData = {
       options: ["GAWAR", "MY GIRL", "P A", "SAKHII"],
       correctAnswer: "MY GIRL",
       memory: {
-        type: "image",
-        content: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "Always be my 👑💅 girliee 💁‍♀️💖"
+        type: "video",
+        content: "https://youtube.com/embed/8zIB3bv3tsY",
+        message: "Ladle, nickey hogi tu kisi aur ki, mere liye tu my girl hai. 😏huh!!! .."
       }
     },
     {
@@ -29,9 +29,9 @@ export const quizData = {
       options: ["Late night talks🌙", "Food hunting 🍣", "Making reels🎥", "Laughing for no reason😆"],
       correctAnswer: "Laughing for no reason😆",
       memory: {
-        type: "image",
-        content: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        message: "Hasti hui chimpanzee kahi ki.🤪🤪🤪"
+        type: "video",
+        content: "https://youtube.com/embed/Q5m-_eYCt5I",
+        message: "Haindred % 🤷🏻‍♀️,,,, 😂🤣, btw, what's your battery %age right now 👀 screenshot bhejiyo."
       }
     },
     {
@@ -41,7 +41,7 @@ export const quizData = {
       correctAnswer: "Your weird laugh😆",
       memory: {
         type: "video",
-        content: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        content: "https://youtube.com/embed/lXsyNMWkfZA?",
         message: "Kaash thoda ache se has leti m bhi khush ho jaati ye soch ke🤣🤣🤣"
       }
     },
@@ -51,15 +51,15 @@ export const quizData = {
       options: ["Hieeee", "Meri photo le", "Chal ab hat ja", "none of these"],
       correctAnswer: "Hieeee",
       memory: {
-        type: "image",
-        content: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        type: "video",
+        content: "https://youtube.com/embed/xPGcTwJvdXc",
         message: "Pagli kahi ki🐒🙈🤭"
       }
     }
   ],
   finalGift: {
-    coordinates: { lat: 28.6139, lng: 77.2090 },
-    what3words: "///gift.cake.tree",
+    coordinates: { lat: 28.3667660, lng: 77.3171110 },
+    what3words: "///army.swells.charts",
     message: "Your gift is hidden at this location! Use the coordinates or the what3words link to find it."
   }
 };
